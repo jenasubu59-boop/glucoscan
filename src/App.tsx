@@ -5,6 +5,7 @@ import Scanner from './components/Scanner';
 import Science from './components/Science';
 import Profile from './components/Profile';
 import FoodDetails from './components/FoodDetails';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -30,7 +31,9 @@ export default function App() {
           {activeTab === 'profile' && <Profile />}
           
           <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
+          <SpeedInsights />
         </>
+      
       )}
     </div>
   );
